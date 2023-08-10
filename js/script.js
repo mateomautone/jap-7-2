@@ -19,3 +19,6 @@ function showData(dataArray) {
 }
 
 // Escribe el código necesario para realizar el fetch al archivo con los datos y mostrar los estudiantes con la función showData
+fetch(DATA_URL)
+  .then(response => response.json())
+  .then(data => showData(data.students));
